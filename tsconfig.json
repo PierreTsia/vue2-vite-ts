@@ -9,6 +9,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "strictNullChecks": false,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
@@ -16,13 +17,15 @@
       "vite-plugin-vue-layouts/client",
       "vite-plugin-pages/client",
       "vite/client",
-      "unplugin-vue2-script-setup/types"
+      "unplugin-vue2-script-setup/types",
+      "node",
+      "jest"
     ],
     "paths": {
       "@/*": ["./src*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.vue", "tests/**/*.ts", "tests/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules", "mock", "build", "dist"]
 }

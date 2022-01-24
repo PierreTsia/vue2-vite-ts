@@ -18,7 +18,7 @@ const alias = [
   { find: 'vue', replacement: 'vue/dist/vue.esm' },
   {
     find: '@',
-    replacement: resolve(__dirname, ''),
+    replacement: resolve(__dirname, 'src'),
   },
 ]
 
@@ -46,7 +46,7 @@ export default defineConfig({
     // 代理
     proxy,
 
-    port: 3003,
+    port: 3001,
     fs: {
       strict: false,
     },

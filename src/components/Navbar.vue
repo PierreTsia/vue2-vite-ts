@@ -1,34 +1,30 @@
 <template>
   <header>
-    <el-menu
-      :default-active="activeIndex"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-    >
-      <el-menu-item index="0"> home </el-menu-item>
-      <el-menu-item index="1"> about </el-menu-item>
-      <el-menu-item index="2"> news </el-menu-item>
-    </el-menu>
+    <template>
+      <v-card class="overflow-hidden">
+        <v-app-bar color="secondary" dark>
+          <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+          <v-tabs align-with-title>
+            <v-tab><router-link to="/">Home</router-link></v-tab>
+            <v-tab><router-link to="/about">About</router-link></v-tab>
+            <v-tab><router-link to="/todo">Todos</router-link></v-tab>
+          </v-tabs>
+          <v-spacer></v-spacer>
+
+          <v-btn icon>
+            <v-icon>mdi-magnify</v-icon>
+          </v-btn>
+
+          <v-btn icon>
+            <v-icon>mdi-heart</v-icon>
+          </v-btn>
+
+          <v-btn icon>
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </v-app-bar>
+      </v-card>
+    </template>
   </header>
 </template>
-
-<script lang="ts">
-import { defineComponent, ref } from '@vue/composition-api'
-import { useRouter } from 'vue2-helpers/vue-router'
-export default defineComponent({
-  setup() {
-    const route = useRouter()
-    const activeIndex = ref('0')
-
-    const handleSelect = (key: string) => {
-      const routes = ['/', '/about', '/news/1']
-      activeIndex.value = key
-      const idx = Number(key)
-      const path = routes[idx]
-      route.push(path)
-    }
-    return { activeIndex, handleSelect }
-  },
-})
-</script>

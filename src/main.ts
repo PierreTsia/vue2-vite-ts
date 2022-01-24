@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VCA, { createApp, h } from '@vue/composition-api'
 import router from './router'
 import AddModules from './modules/index'
-import store from './store'
 import App from './App.vue'
+import vuetify from './plugins/vuetify'
 
 // windicss layers
 import 'virtual:windi-base.css'
@@ -15,13 +15,13 @@ import 'virtual:windi-devtools'
 
 Vue.use(VCA)
 
-AddModules({ app: Vue, store, router })
+AddModules({ app: Vue, router })
 
 Vue.config.productionTip = false
 
 const app = createApp({
   router,
-  store,
+  vuetify,
   render: () => h(App),
 })
 
