@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    // Add typescript parser (babel-eslint must be removed)
+    "eslint:recommended",
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "prettier"],
+  // add your custom rules here
+  "rules": {
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false,
+          "Function": false
+        }
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-namespace": ["error", { "allowDeclarations": true }],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreUrls": true,
+        "ignoreComments": true,
+        "ignoreStrings": true
+      }
+    ],
+    "comma-dangle": ["error", "only-multiline"],
+    "no-multiple-empty-lines": "warn",
+    "space-before-function-paren": "off"
+  },
+  "overrides": [
+    {
+      "files": [ "src/**/*.spec.ts" ], // Allow any for tests files as Wrapper<T> is tricky to type https://github.com/vuejs/vue-test-utils/issues/255
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ]
+}
