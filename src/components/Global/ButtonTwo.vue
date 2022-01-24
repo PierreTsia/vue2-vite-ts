@@ -1,7 +1,7 @@
 <template>
-  <el-button type="info">
+  <v-btn color="info">
     <slot />
-  </el-button>
+  </v-btn>
 </template>
 
 <script lang="ts">

@@ -7,9 +7,7 @@ import ScriptSetup from 'unplugin-vue2-script-setup/vite'
 import Inspect from 'vite-plugin-inspect'
 import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
-import Components from 'unplugin-vue-components/vite'
-import { ElementUiResolver } from 'unplugin-vue-components/resolvers'
-import WindiCSS from 'vite-plugin-windicss'
+
 
 const rollupOptions = {}
 
@@ -71,11 +69,6 @@ export default defineConfig({
     }),
     PkgConfig(),
     OptimizationPersist(),
-    Components({
-      resolvers: [ElementUiResolver()],
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      dts: true,
-    }),
     Inspect(),
     ScriptSetup(),
     Layouts({
@@ -90,7 +83,6 @@ export default defineConfig({
       replaceSquareBrackets: true,
       nuxtStyle: true,
     }),
-    WindiCSS(),
   ],
   css: {
     preprocessorOptions: {},

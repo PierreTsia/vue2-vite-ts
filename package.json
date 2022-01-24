@@ -13,13 +13,11 @@
     "@vue/composition-api": "^1.0.0-rc.8",
     "@vueuse/core": "^4.9.1",
     "core-js": "^3.11.1",
-    "element-ui": "^2.15.5",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1",
     "vue-test-utils": "^1.0.0-beta.11",
     "vue2-helpers": "^1.1.3",
-    "vuetify": "^2.6.2",
-    "vuex": "^3.6.2"
+    "vuetify": "^2.6.2"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",
@@ -52,29 +50,20 @@
     "vite-plugin-style-import": "^1.1.1",
     "vite-plugin-vue-layouts": "^0.3.1",
     "vite-plugin-vue2": "^1.4.4",
-    "vite-plugin-windicss": "^1.2.7",
     "vue-demi": "^0.7.5",
     "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.14",
-    "vue-tsc": "^0.29.8",
-    "windicss": "^3.1.7"
+    "vue-tsc": "^0.29.8"
   },
   "vite": {
     "optimizeDeps": {
       "include": [
         "@vue/composition-api",
         "@vue/runtime-dom",
-        "element-ui",
-        "element-ui/lib/button",
-        "element-ui/lib/divider",
-        "element-ui/lib/menu",
-        "element-ui/lib/menu-item",
-        "element-ui/lib/tag",
         "vue",
         "vue-router",
         "vue2-helpers/vue-router",
-        "vuetify",
-        "vuex"
+        "vuetify"
       ]
     }
   }
