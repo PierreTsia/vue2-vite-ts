@@ -4,6 +4,7 @@ import router from './router'
 import AddModules from './modules/index'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
+import i18n from './plugins/i18n'
 
 Vue.use(VCA)
 
@@ -14,6 +15,7 @@ Vue.config.productionTip = false
 const app = createApp({
   router,
   vuetify,
+  i18n,
   render: () => h(App),
 })
 
