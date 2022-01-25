@@ -12,7 +12,15 @@ Vite Vue2 typescript starter template using composition-api with Script Setup!
 
 - 😃 [Script Setup](https://github.com/antfu/vue2-script-setup-transform)
 
-- 🎨 [Commitlint](./husky)
+- ✅ [Testing](https://jestjs.io/fr/)
+
+- 🌍 [Internationalization](https://kazupon.github.io/vue-i18n/)
+
+- 💄 [Vuetify](https://vuetifyjs.com/)
+
+- 🚦 [EsLint](https://eslint.org/) 
+
+- 🦋 [Prettier](https://prettier.io/) 
 
 - 🔥 TypeScript, of course
 
@@ -40,18 +48,16 @@ Vite Vue2 typescript starter template using composition-api with Script Setup!
 Just run and visit http://localhost:3003
 
 ```bash
-yarn dev
+npm run dev
 ```
 
-## Commit lint
+## Tests
 
-This repo use `commitizen` , if run `git cz` has no effect, you might need to install commitizen global as `yarn add global commitizen` or `npm i -g commitizen`
+Run 
 
-then use `git cz` to add commit information.
-
-At lint staged it will trigger eslint auto fix and use `pretty-quick` to format files.
-
-And enjoy!
+```bash
+npm run test
+```
 
 ### Thanks
 
